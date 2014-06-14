@@ -1,0 +1,16 @@
+*** Setting ***
+Library           Selenium2Library
+Suite Teardown    Close Browser
+*** Variables ***
+${GOOGLE URL}    http://www.google.co.th
+*** Testcases ***
+Search from google
+    ค้นหา robot
+    เจอ robot
+*** Keywords ***
+ค้นหา robot
+    Open Browser                  ${GOOGLE URL}
+		Input Text                    gbqfq    Robot
+เจอ robot
+		Click Button                  gbqfb
+		Wait Until Page Contains      Robot
